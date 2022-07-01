@@ -60,7 +60,8 @@ public class ManagerTest {
 
     @Test
     public void ShouldFindNothing() {
-        Ticket[] actual = manager.findTickets(2926, 9424);
+        manager.addTicket(ticket1);
+        Ticket[] actual = manager.findTickets(5237, 9424);
         Ticket[] expected = new Ticket[0];
         assertArrayEquals(actual, expected);
     }
